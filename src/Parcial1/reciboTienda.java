@@ -11,10 +11,9 @@ public class reciboTienda {
         double precio2 = 199.99;
         double precio3 = 99.99;
 
-        // Se calcula el total
-        double subtotal = precio1 + precio2 + precio3;
-        double tax = subtotal * 0.08;
-        double total = subtotal + tax;
+        double subtotal = precio1 + precio2 + precio3; // Se calcula la suma de los items, y el resultado se guarda en la misma variable
+        double impuestos = subtotal * 0.08; // Lo que se guardó en la variable subtotal se multiplica por 0.08 para sacar el valor de impuestos
+        double total = subtotal + impuestos; // Se suman las variables de subtotal más los impuestos
 
         // En esta parte se imprimen las variables en terminal
         System.out.println("RECIBO DE TIENDA");
@@ -24,7 +23,7 @@ public class reciboTienda {
         System.out.printf("%s: $%.2f\n", item3, precio3);
         System.out.println("-------------");
         System.out.printf("Subtotal: $%.2f\n", subtotal);
-        System.out.printf("Impuestos: (8%%): $%.2f\n", tax);
+        System.out.printf("Impuestos: (8%%): $%.2f\n", impuestos);
         System.out.printf("Total: $%.2f", total);
 
     }
