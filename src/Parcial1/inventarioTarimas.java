@@ -18,7 +18,7 @@ public class inventarioTarimas {
         String productosTarima = scanner.next();
         System.out.println();
 
-
+        System.out.println("No ideas help");
 
 
         scanner.close();
