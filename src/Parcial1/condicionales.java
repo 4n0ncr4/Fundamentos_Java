@@ -17,7 +17,6 @@ public class condicionales {
             System.out.println("Pobre saldo insuficiente, trabaja");
         }
 
-
         System.exit(0);
         int edad = 23;
         if (edad >= 18){
@@ -25,5 +24,6 @@ public class condicionales {
         } else {
             System.out.println("Puedes jugar: Canicas, Minecraft, Barbies, Carritos, Tazos");
         }
+
     }
 }
