@@ -1,5 +1,4 @@
 package Parcial1;
-import java.util.Scanner;
 
 public class IfAnidado {
     static void main() {
@@ -18,6 +17,5 @@ public class IfAnidado {
             System.out.println("Declaracion anual");
             System.out.println("Declaracion mensual");
         }
-
     }
 }
