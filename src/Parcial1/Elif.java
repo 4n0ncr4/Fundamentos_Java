@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class Elif {
     static void main() {
+
+
+
+        /* EJERCICIOS DE CLASE
         Scanner leer = new Scanner(System.in);
         String tipoAmor;
         System.out.println("Descubre la verdad amigo no cierres los ojos");
@@ -37,5 +41,7 @@ public class Elif {
         } else {
             System.out.println("Opcion no valida");
         }
+
+         */
     }
 }

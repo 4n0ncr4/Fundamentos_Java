@@ -3,6 +3,9 @@ package Parcial1;
 public class IfAnidado {
     static void main() {
 
+
+
+        /* EJERCICIOS DE CLASE
         String tipo = "Asalariado";
         int ganas = 400000;
         int cantidadTrabajos = 2;
@@ -16,6 +19,6 @@ public class IfAnidado {
             System.out.println("Obligaciones");
             System.out.println("Declaracion anual");
             System.out.println("Declaracion mensual");
-        }
+        } */
     }
 }
