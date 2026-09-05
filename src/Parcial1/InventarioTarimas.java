@@ -1,10 +1,12 @@
 package Parcial1;
-import java.util.Scanner;
+import java.util.Scanner; // Se importa la clase Scanner
 
 public class InventarioTarimas {
     static void main() {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Se crea el objeto para la lectura de datos
+
+        //Recolección de datos por medio del Scanner
 
         System.out.print("Ingrese el nombre del producto: ");
         String nombre = scanner.nextLine();
@@ -16,7 +18,7 @@ public class InventarioTarimas {
         int productosTarima = scanner.nextInt();
         System.out.println();
 
-        scanner.close();
+        scanner.close(); // Se cierra el objeto Scanner
 
         // Variables donde se guardan los cálculos de las tarimas completas y la cantidad de productos restantes
 
