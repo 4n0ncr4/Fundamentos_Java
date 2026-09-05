@@ -1,6 +1,6 @@
 package Parcial1;
 
-public class reciboTienda {
+public class ReciboTienda {
     static void main() {
 
         // Se declaran las variables

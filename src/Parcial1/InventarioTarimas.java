@@ -1,7 +1,7 @@
 package Parcial1;
 import java.util.Scanner;
 
-public class inventarioTarimas {
+public class InventarioTarimas {
     static void main() {
 
         Scanner scanner = new Scanner(System.in);

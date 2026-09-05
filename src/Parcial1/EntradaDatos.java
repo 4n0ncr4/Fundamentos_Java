@@ -1,7 +1,7 @@
 package Parcial1;
 import java.util.Scanner;
 
-public class entradaDatos {
+public class EntradaDatos {
     static void main() {
         Scanner scanner=new Scanner(System.in);
 

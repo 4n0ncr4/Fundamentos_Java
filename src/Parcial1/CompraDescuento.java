@@ -1,7 +1,7 @@
 package Parcial1;
 import java.util.Scanner; // Se importa la clase Scanner
 
-public class compraDescuento {
+public class CompraDescuento {
     static void main() {
 
         Scanner scanner = new Scanner (System.in); // Se crea el objeto de la clase Scanner

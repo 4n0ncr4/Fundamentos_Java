@@ -1,7 +1,7 @@
 package Parcial1;
 import java.util.Scanner;
 
-public class estructurasControl {
+public class EstructurasControl {
     static void main() {
         Scanner leer = new Scanner(System.in);
 

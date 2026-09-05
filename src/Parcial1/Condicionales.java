@@ -1,7 +1,7 @@
 package Parcial1;
 import java.util.Scanner;
 
-public class condicionales {
+public class Condicionales {
     static void main() {
 
         // Retiro de saldo
