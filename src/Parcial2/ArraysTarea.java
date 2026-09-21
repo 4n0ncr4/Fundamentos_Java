@@ -20,5 +20,6 @@ public class ArraysTarea {
         for (int j = 0; j < elementos.length; j++) {
             System.out.println((j + 1) + ".- " + elementos[j] + " es " + clasificacion[j]);
         }
+        System.out.println("hola git");
     }
 }
