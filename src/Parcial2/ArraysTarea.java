@@ -6,19 +6,23 @@ public class ArraysTarea {
 
         Scanner scanner = new Scanner(System.in);
         String [] elementos = {"PostgreSQL", "MongoDB", "InfluxDB", "MySQL",
-        "Redis", "Prometheus", "SAP HANA", "Cassnadra", "Orcale", "OpenTSDB"}; // Arreglo definido
-        String [] clasificacion = new String[10]; // Arreglo de 10 espacios ya definido
+        "Redis", "Prometheus", "SAP HANA", "Cassandra", "Oracle", "OpenTSDB"}; // Arreglo definido
+        String [] clasificacion = new String[elementos.length]; // Arreglo de 10 espacios ya definido
 
         for (int i = 0; i < elementos.length; i++) {
             System.out.println("Cuál es la clasificación de " +  elementos[i] + "?");
-            System.out.println("Relacional, No Relacional, Series temporales");
+            System.out.println("Relacional, No Relacional, Series Temporales");
             System.out.print("= ");
             String leer = scanner.nextLine(); // Lectura desde el Scanner (leer)
-            clasificacion[i] = leer; // Se guardan la lectura en el arreglo "clasificacion"
+            if (leer.equalsIgnoreCase("Relacional") ||  leer.equalsIgnoreCase("No Relacional") || leer.equalsIgnoreCase("Series Temporales")) {
+                clasificacion[i] = leer; // Se guardan la lectura en el arreglo "clasificacion"
+            } else {
+                clasificacion[i] = "[Categoría No Válida]";
+            }
         }
 
         for (int j = 0; j < elementos.length; j++) {
-            System.out.println((j + 1) + ".- " + elementos[j] + " es " + clasificacion[j]);
+            System.out.println((j + 1) + ".- " + elementos[j] + " - " + clasificacion[j]);
         }
     }
 }
