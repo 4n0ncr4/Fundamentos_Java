@@ -20,8 +20,8 @@ public class ProgramaExtra1 {
         String [] puntuacionString = new String[series.length];
 
         for (int i = 0; i < series.length; i++) {
-            System.out.println("Qué calificación le darías a la serie? (Del 0 al 5)");
-            System.out.print(series[i] + ": ");
+            System.out.println("Qué calificación le darías a " + series[i] + "? (Del 0 al 5)");
+            System.out.print("Tu respuesta: ");
             int calificacion = leer.nextInt();
 
             if (calificacion < 0 || calificacion > 5) {
