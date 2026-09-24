@@ -5,8 +5,17 @@ public class ProgramaExtra1 {
     static void main() {
 
         Scanner leer = new Scanner(System.in);
-        String [] series = {"Breaking Bad", "Better Call Saul", "Stranger Things", "Dexter",
-                            "Mr. Robot", "Six Feet Under", "Black Mirror", "Prison Break"};
+        System.out.print("Ingresa la cantidad de series que quieras calificar: ");
+        int cantidadSeries = leer.nextInt();
+        leer.nextLine();
+        String [] series = new String [cantidadSeries];
+
+        for (int h = 0; h < series.length; h++) {
+            System.out.println("Ingresa tus series ");
+            System.out.print(h + 1 + ".- ");
+            series[h] = leer.nextLine();
+        }
+
         int [] puntuacion = new int [series.length];
         String [] puntuacionString = new String[series.length];
 
