@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class RespuestaDeAmor {
     static void main() {
-
         Scanner leer  = new Scanner(System.in);
         int respuesta;
-
         do {
             System.out.println("Quieres ser mi novia?");
             System.out.println("1.- Si 2.- No");
