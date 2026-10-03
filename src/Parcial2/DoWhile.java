@@ -27,14 +27,14 @@ public class DoWhile {
             if (intentoss == 2) conectado = true;
             System.out.println("Intentos: " + intentoss);
         } while (!conectado && intentoss < 3);
+         */
 
         int estado = 0, intentosss = 0;
         do {
-            intentos++;
+            intentosss++;
             if (intentosss == 2) estado = 1;
             System.out.println("Intentos " + intentosss);
         } while (sinConexion(estado));
-         */
 
     }
 }
