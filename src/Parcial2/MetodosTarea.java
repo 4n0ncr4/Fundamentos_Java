@@ -24,15 +24,15 @@ public class MetodosTarea {
     }
 
     static String evaluarMemoria(int uso){
-        String rangoProcesador = uso <= 75 ? "Estado normal" : uso >= 76 && uso <= 85
+        String rangoMemoria = uso <= 75 ? "Estado normal" : uso >= 76 && uso <= 85
                 ? "Requiere supervisión" : "Estado crítico";
-        return uso + "% - " + rangoProcesador;
+        return uso + "% - " + rangoMemoria;
     }
 
     static String evaluarAlmacenamiento(int uso){
-        String rangoProcesador = uso <= 75 ? "Estado normal" : uso >= 76 && uso <= 85
+        String rangoAlmacenamiento = uso <= 75 ? "Estado normal" : uso >= 76 && uso <= 85
                 ? "Requiere supervisión" : "Estado crítico";
-        return uso + "% - " + rangoProcesador;
+        return uso + "% - " + rangoAlmacenamiento;
     }
 
     static String evaluarServidor(int procesador,  int memoria, int almacenamiento){
