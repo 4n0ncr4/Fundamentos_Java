@@ -48,8 +48,17 @@ public class Metodos {
         return uso + "% - " + rangoProcesador;
     }
 
-    static String evaluarServidor(){
-        return "N/A";
+    static String evaluarServidor(int procesador,  int memoria, int almacenamiento){
+        if (procesador > 70){
+            return "No está funcionando correctamente el procesador";
+        }
+        if (memoria > 75){
+            return "No está funcionando correctamente la memoria RAM";
+        }
+        if (almacenamiento > 70){
+            return "No está funcionando correctamente";
+        }
+        return "Todo está bien";
     }
 
     static String mostrarResultados() {
