@@ -32,17 +32,17 @@ public class ProgramaExtra2 {
         }
         switch(seleccion){
             case 1:
-                return "El Coche compacto al día cuesta: $600";
+                return "El Coche compacto";
             case 2:
-                return "La SUV Estándar al día cuesta: $1000";
+                return "La SUV Estándar";
             case 3:
-                return "La Minivan al día cuesta: $1600";
+                return "La Minivan";
             case 4:
-                return "La SUV Premium al día cuesta: $2000";
+                return "La SUV Premium";
             case 5:
-                return "La Furgoneta al día cuesta: $3000";
+                return "La Furgoneta";
             case 6:
-                return "El Camión de carga cuesta: $4000";
+                return "El Camión De Carga";
         }
         return "";
     }
@@ -62,10 +62,18 @@ public class ProgramaExtra2 {
         } else {
             precio = 4000;
         }
-        return "El precio de " + seleccion + " es $" + precio;
+        return seleccion + " al día cuesta $" + precio;
+    }
+
+    static String diasRenta(String seleccion, int precio, int dias){
+        System.out.print("Cuántos días vas a rentar el vehiculo?: ");
+        dias = leerDatos();
+        int precioFinal = dias * precio;
+        return String.valueOf(precioFinal);
     }
 
     static String precioFinal(String calcular){
+        calcular = diasRenta("ayuda", 1,1);
         return "";
     }
 
@@ -73,8 +81,8 @@ public class ProgramaExtra2 {
         System.out.println(mostrarCategorias());
         String seleccion = seleccionVehiculo();
         String calcular = calcularPrecio(seleccion, 1);
-        String total = precioFinal(calcular);
         System.out.println(calcular);
+        System.out.println(diasRenta("El precio final es: ", 1,1));
         return "";
     }
 }
