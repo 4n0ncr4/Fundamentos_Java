@@ -2,33 +2,56 @@ package Parcial2;
 import java.util.Scanner;
 
 public class WhileTarea {
+    static int totalArchivos = 5;
+    static Scanner leer = new Scanner(System.in);
+
     static void main() {
-        mostrarMenu();
+        mostrarProceso();
     }
 
-    static String mostrarMenu(){
-        String [] menu = {"1. Respaldar un archivo", "2. Ver avance", "3. Cancelar"};
-            for (int i = 0; i < menu.length; i++){
-                System.out.println(menu[i]);
+    static void mostrarProceso(){
+        int respaldados = 0;
+        while (faltanArchivos(respaldados)){
+            mostrarMenu();
+            int opcion = leerOpcion();
+            if (opcion == 1) {
+                respaldados = respaldarArchivo(respaldados);
+            } else if (opcion == 2) {
+                verAvance(respaldados);
+            } else if (opcion == 3) {
+                System.out.println("Respaldo cancelado");
+                break;
+            } else {
+                System.out.println("Opción no válida");
             }
-            System.out.println("");
-            leerDatos();
-        return "";
-    }
-
-    static int leerDatos(){
-        Scanner leer = new Scanner(System.in);
-        System.out.print("Elige una opción: ");
-        int opcion = leer.nextInt();
-        while (opcion < 1 || opcion > 3){
-            opcion = leerDatos();
         }
-        return opcion;
+        if (!faltanArchivos(respaldados)) {
+            System.out.println("Respaldo listo");
+        }
     }
 
-    static int archivosRespaldados(){
-        int respaldo = leerDatos();
-        return respaldo;
+    static boolean faltanArchivos(int respaldados) {
+        return respaldados < totalArchivos;
     }
 
+    static void mostrarMenu(){
+        System.out.println("1. Respaldar un archivo");
+        System.out.println("2. Ver avance");
+        System.out.println("3. Cancelar");
+        System.out.print("Elige una opción: ");
+    }
+
+    static int leerOpcion(){
+        return leer.nextInt();
+    }
+
+    static int respaldarArchivo(int respaldados){
+        respaldados++;
+        System.out.println("Archivo respaldado. Total: " + respaldados);
+        return respaldados;
+    }
+
+    static void verAvance(int respaldados){
+        System.out.println("Archivos respaldados: " + respaldados + " de " + totalArchivos);
+    }
 }
