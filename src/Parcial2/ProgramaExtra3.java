@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ProgramaExtra3 {
     static int meta = 500;
-    static Scanner sc = new Scanner(System.in);
+    static Scanner leer = new Scanner(System.in);
 
     static void main() {
         iniciarAhorro();
@@ -13,7 +13,7 @@ public class ProgramaExtra3 {
         int ahorro = 0;
         while (faltaPorAhorrar(ahorro)) {
             mostrarMenu();
-            int opcion = sc.nextInt();
+            int opcion = leer.nextInt();
             if (opcion == 1) {
                 ahorro = depositar(ahorro);
             } else if (opcion == 2) {
@@ -43,7 +43,7 @@ public class ProgramaExtra3 {
 
     static int depositar(int ahorro) {
         System.out.print("¿Cuánto quieres depositar? $");
-        int monto = sc.nextInt();
+        int monto = leer.nextInt();
         if (monto <= 0) {
             System.out.println("El monto debe ser mayor a 0");
             return ahorro;
