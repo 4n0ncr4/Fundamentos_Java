@@ -1,0 +1,57 @@
+package Parcial3;
+import java.util.Scanner;
+
+public class DoWhileTarea {
+    static Scanner leer = new Scanner(System.in);
+    static boolean estado;
+
+    static void main() {
+        mostrarProceso();
+    }
+
+    static int leerOpcion(){
+        return leer.nextInt();
+    }
+
+    static void mostrarMenu(){
+        System.out.println("1.- Probar conexión");
+        System.out.println("2.- Ver estado");
+        System.out.println("3.- Cancelar");
+        System.out.print("Elige una opción: ");
+    }
+
+    static void mostrarProceso(){
+        do {
+            mostrarMenu();
+            int opcion = leerOpcion();
+            if (opcion == 1) {
+                byte parametro = 0;
+                actualizarEstado(parametro);
+            } else if (opcion == 2) {
+                System.out.println("No sé");
+            } else if (opcion == 3) {
+                System.out.println("Prueba cancelado");
+                break;
+            } else {
+                System.out.println("Opción no válida");
+            }
+        } while (true);
+    }
+
+    static boolean estadoConexion() {
+        return estado ;
+    }
+
+    static byte actualizarEstado(byte nuevoEstado){
+        System.out.print("Elige un nuevo estado (0 o 1): ");
+        nuevoEstado = leer.nextByte();
+        if (nuevoEstado == 0) {
+            estado = false;
+        } else if (nuevoEstado == 1) {
+            estado = true;
+        } else {
+            System.out.println("Opción no válida");
+        }
+        return nuevoEstado;
+    }
+}
