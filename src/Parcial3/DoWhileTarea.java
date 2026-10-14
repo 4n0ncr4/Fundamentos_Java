@@ -17,29 +17,38 @@ public class DoWhileTarea {
         System.out.println("1.- Probar conexión");
         System.out.println("2.- Ver estado");
         System.out.println("3.- Cancelar");
-        System.out.print("Elige una opción: ");
     }
 
     static void mostrarProceso(){
         do {
             mostrarMenu();
+            System.out.print("Elige una opción: ");
             int opcion = leerOpcion();
             if (opcion == 1) {
                 byte parametro = 0;
                 actualizarEstado(parametro);
+                if (estado == true){
+                    System.out.println("Servidor conectado");
+                    break;
+                } else {
+                    System.out.println("Servidor no conectado");
+                }
             } else if (opcion == 2) {
-                System.out.println("No sé");
+                if (estado == false){
+                    System.out.println("Estado del servidor: " + estadoConexion() + " (no conectado)");
+                }
+                continue;
             } else if (opcion == 3) {
-                System.out.println("Prueba cancelado");
+                System.out.println("Prueba cancelada");
                 break;
             } else {
                 System.out.println("Opción no válida");
             }
-        } while (true);
+        } while (estado == false);
     }
 
     static boolean estadoConexion() {
-        return estado ;
+        return estado;
     }
 
     static byte actualizarEstado(byte nuevoEstado){
