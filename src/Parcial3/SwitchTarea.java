@@ -32,7 +32,8 @@ public class SwitchTarea {
                         break;
                     case 4:
                         System.out.println(categoriasPizza[3] + " $180");
-                }
+                        break;
+                } break;
             case 2:
                 String[] categoriasHamburguesas = {"Hamburguesa de Queso", "Hamburguesa de doble carne",
                         "Hamburguesa Vegetariana", "Hamburguesa con Tocino"};
@@ -54,7 +55,7 @@ public class SwitchTarea {
                     case 4:
                         System.out.println(categoriasHamburguesas[3] + " $275");
                         break;
-                }
+                } break;
             case 3:
                 String[] categoriasAlitas = {"Alitas con BBQ", "Alitas con Salsa Búffalo",
                         "Alitas con Barbacoa", "Alitas con Queso"};
@@ -98,7 +99,7 @@ public class SwitchTarea {
                     case 4:
                         System.out.println(categoriasBoneless[3] + " $300");
                         break;
-                }
+                } break;
         }
     }
 }
