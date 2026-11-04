@@ -4,6 +4,7 @@ package Parcial3;
 public class Main2 {
     static void main() {
 
+
         Peliculas peliculita = new Peliculas();
         peliculita.titulo = "Bambi";
         peliculita.anioPublicacion = 1980;
@@ -11,5 +12,12 @@ public class Main2 {
         peliculita.actores = new String[] {"Bambi", "Mama de bambi", "El conejo"};
         peliculita.genero = "Infantil";
         peliculita.mostrarInfo();
+
+        /*
+        peliculita.mostrarInfo();
+        peliculita.titulo = "La Purga";
+        peliculita.mostrarInfo();
+        */
+
     }
 }
